@@ -1,11 +1,11 @@
 "use client";
-import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
+import { SessionProvider } from "next-auth/react";
 
-export const NextAuthProvider = ({ children, session}:{children: React.ReactNode, session:Session | null}) => {
+export const NextAuthProvider = ({ children, session }: { children: React.ReactNode; session: Session | null }) => {
   return (
-    <SessionProvider session={session}  refetchOnWindowFocus={false}>
+    <SessionProvider session={session} refetchOnWindowFocus={false}>
       {children}
     </SessionProvider>
-  )
+  );
 };
